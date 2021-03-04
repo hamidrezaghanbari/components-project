@@ -1,0 +1,65 @@
+#p2,
+#p3 {
+    left: 200%;
+}
+
+#t2:target #p2,
+#t3:target #p3 {
+    transform: translateX(-190%);
+}
+
+#t2:target #p1,
+#t3:target #p1 {
+    background-color: white;// TODO change to other color
+}
+
+#t2:target .fa-rocket,
+#t2:target .fa-sticky-note,
+#t3:target .fa-user-minus,
+#t3:target .fa-rocket {
+    filter: blur(2px);
+}
+
+
+#t2:target .fa-rocket,
+#t2:target .fa-sticky-note,
+#t3:target .fa-user-minus,
+#t3:target .fa-rocket {
+    transform: scale(0.9);
+    transition-delay: 0.25s;
+}
+
+.vertical-menu {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 10%;
+    height: 100vh;
+    padding: 0;
+    text-align: center;
+}
+
+
+#fa-rocket {
+    width: 100%;
+}
+
+#fa-user-minus, #fa-sticky-note {
+    width: 100%;
+    padding-right: 10%;
+}
+
+#p1 .vertical-menu-section {
+    transform: translateX(0%) !important;
+}
+
+#t2:target #p2 .vertical-menu-section,
+#t3:target #p3 .vertical-menu-section {
+    transform: translateX(0%) !important;
+    transition-delay: 0.4s;
+}

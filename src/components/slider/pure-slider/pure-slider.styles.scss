@@ -1,0 +1,144 @@
+.slideshow-wrap {
+    display: block;
+    height: 320px;
+    max-width: 640px;
+    min-width: 260px;
+    margin: auto;
+    border: 12px solid lightgray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+#slideshow-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+
+    ul {
+        height: 100%;
+        width: 500%;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        transition: all 0.8s ease;
+
+        li {
+            width: 20%;
+            height: 100%;
+            float: right;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+                margin: auto;
+                display: block;
+            }
+        }
+    }
+}
+
+.slide-button {
+    position: absolute;
+    right: 50%;
+    bottom: -45px;
+    width: 12px;
+    height: 12px;
+    z-index: 10;
+    background-color: rgba($color: #968787, $alpha: 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.2s;
+}
+
+.slide-button:active {
+    bottom: -47px;
+}
+.slide-button[for="button-1"] {
+    margin-right: -36px;
+}
+
+.slide-button[for="button-2"] {
+    margin-right: -18px;
+}
+
+// for show slides
+#button-1:checked ~ #slideshow-inner ul {
+    right: 0;
+}
+
+#button-2:checked ~ #slideshow-inner ul {
+    right: -100%;
+}
+
+#button-3:checked ~ #slideshow-inner ul {
+    right: -200%;
+}
+
+// for black toggle bar
+#button-1:checked ~ .slide-button[for="button-1"],
+#button-2:checked ~ .slide-button[for="button-2"],
+#button-3:checked ~ .slide-button[for="button-3"] {
+    background-color: black;
+}
+
+.slider-radio {
+    display: none;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 260px;
+    z-index: 2;
+    cursor: pointer;
+
+    input {
+        display: none;
+    }
+
+    input:checked ~ .description-text {
+        transform: translate(0, 0);
+    }
+
+    label {
+        cursor: pointer;
+        background-color: white;
+        padding: 7px 10px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        border-bottom-left-radius: 10px;
+        z-index: 5;
+
+        &:hover {
+            background-color: #cccccc;
+            transition: background-color 0.4s ease;
+        }
+
+        svg {
+            font-size: 20px;
+        }
+    
+    }
+
+    .description-text {
+        z-index: -1;
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        padding: 40px;
+        background: white;
+        border-bottom-left-radius: 10px;
+        transform: translate(100%, -100%);
+        transition: transform 0.5s ease;
+    }
+
+    
+}
+

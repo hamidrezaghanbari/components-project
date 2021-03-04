@@ -1,0 +1,24 @@
+@import './../../../../assets/css/_colors';
+
+.vertical-menu-icon {
+    font-size: 32px;
+    display: block;
+    opacity: 0.85;
+    transform: scale(0.8);
+}
+
+.vertical-menu-icon svg {
+    color: $text-dark-color;
+}
+
+.vertical-menu-icon:hover {
+    opacity: 1;
+    transform: rotate(15deg) scale(0.9);
+    cursor: pointer;
+}
+
+.vertical-menu-icon {
+    margin: 15px 0;
+    transition: all 0.5s ease-in-out !important;
+    text-align: center;
+}

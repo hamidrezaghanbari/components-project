@@ -1,0 +1,77 @@
+@import './../../../assets/css/_colors.scss';
+
+.canvas-page {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.page-content {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: bold;
+    background-color: $dark-color;
+ 
+    p {
+        color: $white;
+    }
+}
+
+#drawer-toggler {
+    display: none;
+}
+
+.header {
+    height: 70px;
+    background-color: $text-light-color;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    top: 0;
+}
+
+#drawer-toggler-button {
+    cursor: pointer;
+    svg {
+        font-size: 30px;
+    }
+}
+
+.drawer-holder {
+    height: 100%;
+    width: 300px;
+    background-color: $primary-color;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    & li {
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+        & a {
+            color: $white;
+        }
+    }
+}
+
+#drawer-toggler:checked ~ .drawer-holder {
+    right: 0;
+    transition: 0.5s ease;
+}
+
+#drawer-toggler:checked ~ .header {
+    right: 300px;
+    transition: all 0.5s ease;
+    width: calc(100% - 300px);
+} 

@@ -1,0 +1,86 @@
+@import "./../../../assets/css/_colors.scss";
+
+.page-scroller-page {
+    width: 100vw;
+    height: 100vh;
+
+    // background-color: $primary-color;
+    // background-color: white;
+    position: relative;
+}
+
+.left-radio-section {
+    position: fixed;
+    z-index: 20;
+    height: 100vh;
+    // min-width: 130px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+// .page-scroller-form {
+//     text-align: center;
+//     padding: 22px;
+//     display: flex;
+//     flex-direction: column;
+//     // position: fixed;
+//     height: 100vh;
+//     justify-content: center;
+// }
+
+input.page-scroller-radio {
+    height: 0;
+    margin: 12px 0;
+    z-index: 12;
+    direction: ltr;
+    position: relative;
+}
+
+
+.page-scroller-radio:checked {
+    outline: 0;
+    border: 0;
+}
+
+.page-scroller-radio::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 11px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    background-color: $white;
+}
+
+.page-scroller-radio::after {
+    content: "" attr(title) "";
+    position: relative;
+    top: -6px;
+    left: 30px;
+    display: block;
+    min-width: 120px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    opacity: 0;
+}
+
+.page-scroller-radio:checked::after {
+    opacity: 1;
+}
+
+.page-scroller-radio::after:not(label) {
+    opacity: 1;
+}
+
+

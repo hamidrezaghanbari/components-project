@@ -1,0 +1,30 @@
+@import './_colors';
+@import './_fonts';
+
+*, body {
+    padding: 0;
+    margin: 0;
+    font-family: iransans;
+    direction: rtl;
+    text-align: right;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+::selection {
+    background-color: $primary-color;
+    color: white;
+}

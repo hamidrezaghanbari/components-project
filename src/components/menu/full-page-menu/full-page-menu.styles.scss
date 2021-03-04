@@ -1,0 +1,97 @@
+@import './../../../assets/css/_colors.scss';
+
+.burger {
+    font-size: 40px;
+    margin: 30px;
+}
+
+.close {
+    font-size: 40px;
+    position: relative;
+    margin: 30px;
+    display: none;
+}
+
+.close:hover {
+    transform: rotate(45deg);
+}
+
+.icon {
+    transition: all 0.25s ease-in-out;
+    color: $text-dark-color;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: $black;
+}
+
+#full-page-menu-button {
+    display: none;
+}
+
+#full-page-menu-button:checked ~ .full-page-menu-icons {
+    right: 0;
+}
+
+#full-page-menu-button:checked ~ .full-page-menu-icons > .burger {
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+#full-page-menu-button:checked ~ .full-page-menu-icons > .close {
+    display: inline-block;
+    transition: 0.5s ease-in-out;
+}
+
+.full-page-menu-icons {
+    position: absolute;
+    z-index: 1; 
+    left: 0;  
+}
+
+.full-page-menu {
+    height: 100vh;
+    z-index: 3;
+    width: 100vw;
+    background-color: $light-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    color: $white;
+    font-weight: bold;
+    transition: all 0.8s ease-in-out;
+    display: none;
+    
+    .full-page-menu-item {
+        height: 150px;
+        padding-top: 100px;
+        transition: 0.8s ease-in-out;
+    }
+}
+
+.main {
+    display: flex;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary-color;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transition: all 0.5s ease;
+}
+
+#full-page-menu-button:checked ~ .full-page-menu > div {
+    padding-top: 50px;
+}
+
+#full-page-menu-button:checked ~ .main {
+    display: none;
+}
+#full-page-menu-button:checked ~ .full-page-menu {
+    display: flex;// TODO for transition for hide or show
+}
+

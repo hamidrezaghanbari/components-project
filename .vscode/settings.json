@@ -3,10 +3,5 @@
         "activityBar.background": "#3d5afe",
         "titleBar.activeBackground": "#3d5afe",
         "titleBar.activeForeground": "#ffffff"
-    },
-    {
-        "primary-color": "#3d5afe",
-        "dark-color": "#0031ca",
-        "light-color": "#8187ff"
     }
 }

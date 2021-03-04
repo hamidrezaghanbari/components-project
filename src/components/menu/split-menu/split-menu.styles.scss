@@ -1,0 +1,146 @@
+@import "./../../../assets/css/_colors.scss";
+
+.split-page {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.aside-section {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.aside-left {
+    width: 40%;
+    // position: relative;
+    left: 0;
+    background-color: $dark-color;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+
+    padding: 120px;
+    text-align: center;
+
+    p {
+        text-align: center;
+        padding-bottom: 25px;
+        color: white;
+        font-size: 20px;
+    }
+
+
+    button {
+        outline: none;
+        background-color: transparent;
+        border: 1px solid white;
+        padding: 15px 25px;
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+        &:hover {
+            background-color: white;
+            color: $dark-color;
+        }
+    }
+}
+
+.aside-right {
+    width: 60%;
+    right: 0;
+    background-color: $light-color;
+    // position: relative;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+
+    padding: 100px 120px;
+    font-size: 20px;
+
+    li {
+        margin-bottom: 20px;
+    }
+
+    a.aside-anchor {
+        color: white;
+        position: relative;
+        padding-bottom: 5px;
+    
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            background-color: white;
+            left: 0;
+            height: 3px;
+            z-index: 1;
+            width: 50%;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            width: 100%;
+            background-color: $primary-color;
+            border-radius: 3px;
+        }
+
+        &:hover::before {
+            transform: translateX(100%);
+        }
+    }
+}
+
+
+#split-menu-toggler {
+    display: none;
+}
+
+#split-menu-toggler:checked ~ aside > .aside-left {
+    transform: translateY(0);
+}
+
+#split-menu-toggler:checked ~ aside > .aside-right {
+    transform: translateX(0);
+}
+
+.splitter-label {
+    position: fixed;
+    top: 20px;
+    z-index: 3;
+    cursor: pointer;
+    right: 25px;
+
+    .bars {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $text-dark-color;
+        border-radius: 5px;
+        margin: 5px 0px;
+        transition: background-color 0.4s ease-in,
+            width 0.4s ease-in, transform 0.4s ease-in;
+    }
+}
+
+#split-menu-toggler:checked ~ .splitter-label > .bars {
+    background-color: $text-light-color;
+}
+
+#split-menu-toggler:checked ~ .splitter-label > .bar-top {
+   transform: translateY(0) rotate(45deg);
+}
+
+#split-menu-toggler:checked ~ .splitter-label > .bar-bottom {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+#split-menu-toggler:checked ~ .splitter-label > .bar-middle {
+   width: 0;
+}
