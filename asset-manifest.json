@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/components-project/static/css/main.7e120db9.chunk.css",
+    "main.js": "/components-project/static/js/main.437b256c.chunk.js",
+    "main.js.map": "/components-project/static/js/main.437b256c.chunk.js.map",
+    "runtime-main.js": "/components-project/static/js/runtime-main.5b7f6d42.js",
+    "runtime-main.js.map": "/components-project/static/js/runtime-main.5b7f6d42.js.map",
+    "static/css/2.0afc356f.chunk.css": "/components-project/static/css/2.0afc356f.chunk.css",
+    "static/js/2.6076ecb7.chunk.js": "/components-project/static/js/2.6076ecb7.chunk.js",
+    "static/js/2.6076ecb7.chunk.js.map": "/components-project/static/js/2.6076ecb7.chunk.js.map",
+    "static/css/3.d6275596.chunk.css": "/components-project/static/css/3.d6275596.chunk.css",
+    "static/js/3.be05d8fa.chunk.js": "/components-project/static/js/3.be05d8fa.chunk.js",
+    "static/js/3.be05d8fa.chunk.js.map": "/components-project/static/js/3.be05d8fa.chunk.js.map",
+    "static/js/4.8dd0d9c4.chunk.js": "/components-project/static/js/4.8dd0d9c4.chunk.js",
+    "static/js/4.8dd0d9c4.chunk.js.map": "/components-project/static/js/4.8dd0d9c4.chunk.js.map",
+    "static/js/5.aade0062.chunk.js": "/components-project/static/js/5.aade0062.chunk.js",
+    "static/js/5.aade0062.chunk.js.map": "/components-project/static/js/5.aade0062.chunk.js.map",
+    "index.html": "/components-project/index.html",
+    "static/css/2.0afc356f.chunk.css.map": "/components-project/static/css/2.0afc356f.chunk.css.map",
+    "static/css/3.d6275596.chunk.css.map": "/components-project/static/css/3.d6275596.chunk.css.map",
+    "static/css/main.7e120db9.chunk.css.map": "/components-project/static/css/main.7e120db9.chunk.css.map",
+    "static/js/2.6076ecb7.chunk.js.LICENSE.txt": "/components-project/static/js/2.6076ecb7.chunk.js.LICENSE.txt",
+    "static/js/4.8dd0d9c4.chunk.js.LICENSE.txt": "/components-project/static/js/4.8dd0d9c4.chunk.js.LICENSE.txt",
+    "static/media/_preset.scss": "/components-project/static/media/Vazir-Thin.fbd2543e.woff",
+    "static/media/a.d59f6bd9.jpg": "/components-project/static/media/a.d59f6bd9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5b7f6d42.js",
+    "static/js/4.8dd0d9c4.chunk.js",
+    "static/css/main.7e120db9.chunk.css",
+    "static/js/main.437b256c.chunk.js"
+  ]
+}
