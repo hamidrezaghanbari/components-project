@@ -2,6 +2,7 @@
   "name": "components-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://hamidrezaghanbari.github.io/components-project",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
@@ -11,6 +12,7 @@
     "@testing-library/user-event": "^12.1.10",
     "animate.css": "^4.1.1",
     "axios": "^0.21.1",
+    "gh-pages": "^3.1.0",
     "hover.css": "^2.3.2",
     "imagehover.css": "^2.0.0",
     "match-sorter": "^6.3.0",
@@ -29,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

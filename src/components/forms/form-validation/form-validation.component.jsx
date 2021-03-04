@@ -19,7 +19,8 @@ const FormValidationComponent = () => {
         if (value === '1') return true
         return false
     }
-
+ 
+    
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <h1>react form validation with react hook validation</h1>
